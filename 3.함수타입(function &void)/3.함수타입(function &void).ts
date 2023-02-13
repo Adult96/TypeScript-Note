@@ -48,7 +48,7 @@ function 숙제1(name?: string): void {
 // 숫자 또는 문자 이외의 자료가 들어오면 안됩니다.
 
 function 숙제2(params: string | number): number {
-  return params.toString.length;
+  return params.toString().length;
 }
 
 /**
