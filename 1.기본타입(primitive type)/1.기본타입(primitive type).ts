@@ -6,7 +6,7 @@ let 이름: string = 'kim'; //🔥변수 이름 옆에 type 지정
 let 나이: number = 123;
 나이 = 234;
 
-let 결혼여부: boolean = true;
+let 결혼여부: boolean | null | undefined = true;
 결혼여부 = false;
 
 결혼여부 = null;

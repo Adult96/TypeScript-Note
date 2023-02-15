@@ -1,7 +1,8 @@
 {
   "compilerOptions": {
     "target": "es5",
-    "module": "esnext"
+    "module": "esnext",
+    "strictNullChecks": true
   }
 }
 

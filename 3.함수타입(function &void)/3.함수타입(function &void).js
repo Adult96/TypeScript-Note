@@ -15,7 +15,7 @@ function 보이드(input) {
 function 보이드옵션(input) {
     //파라메터에 타입 지정하면 무조건 인자로 받아야 하기때문에 필요할시 옵션 설정함
     // ?는 타입 | undifined 이것과 같은 동작임
-    input * 2;
+    input && input * 2;
 }
 보이드옵션();
 //📌 이 함수는 왜이럴까요?
