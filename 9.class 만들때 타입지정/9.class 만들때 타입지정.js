@@ -1,14 +1,14 @@
-var 기계 = /** @class */ (function () {
-    function 기계(data) {
+class 기계 {
+    name; //자바스크립트와 다르게 Field에다가 선언 해줘야함
+    constructor(data) {
         this.name = data;
     }
-    기계.prototype.함수 = function (value) {
+    함수(value) {
         return value + 1;
-    };
-    return 기계;
-}());
-var 기계1 = new 기계('ㅎ');
-var 기계2 = new 기계('ㄹ');
+    }
+}
+let 기계1 = new 기계('ㅎ');
+let 기계2 = new 기계('ㄹ');
 /**
  * (숙제1) Car 클래스를 만들고 싶습니다.
 
@@ -18,17 +18,18 @@ var 기계2 = new 기계('ㄹ');
 
 3. model과 price 속성의 타입지정도 알아서 잘 해보십시오. tax() 함수의 return 타입도요.
  */
-var Car = /** @class */ (function () {
-    function Car(name, price) {
+class Car {
+    name;
+    price;
+    constructor(name, price) {
         this.name = name;
         this.price = price;
     }
-    Car.prototype.tax = function () {
+    tax() {
         return this.price / 10;
-    };
-    return Car;
-}());
-var car1 = new Car('소나타', 3000);
+    }
+}
+let car1 = new Car('소나타', 3000);
 console.log(car1); //콘솔창 출력결과는 { model : '소나타', price : 3000 }
 console.log(car1.tax()); //콘솔창 출력결과는 300
 /**
@@ -42,15 +43,13 @@ console.log(car1.tax()); //콘솔창 출력결과는 300
 
 4. class 만들 때 넣을 수 있는 숫자와 문자 갯수는 일단 제한은 없습니다. 그리고 타입 빼먹지 마셈
  */
-var Word = /** @class */ (function () {
-    function Word() {
-        var data = [];
-        for (var _i = 0; _i < arguments.length; _i++) {
-            data[_i] = arguments[_i];
-        }
-        var nums = [];
-        var strs = [];
-        data.forEach(function (item) {
+class Word {
+    num;
+    str;
+    constructor(...data) {
+        let nums = [];
+        let strs = [];
+        data.forEach(item => {
             if (typeof item === 'string') {
                 return strs.push(item);
             }
@@ -59,9 +58,8 @@ var Word = /** @class */ (function () {
         this.num = nums;
         this.str = strs;
     }
-    return Word;
-}());
-var a = ['1'];
-var obj = new Word('kim', 3, 5, 'park');
+}
+let a = ['1'];
+let obj = new Word('kim', 3, 5, 'park');
 console.log(obj.num); //[3,5]
 console.log(obj.str); //['kim', 'park']

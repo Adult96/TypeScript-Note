@@ -1,20 +1,11 @@
-var __spreadArray = (this && this.__spreadArray) || function (to, from, pack) {
-    if (pack || arguments.length === 2) for (var i = 0, l = from.length, ar; i < l; i++) {
-        if (ar || !(i in from)) {
-            if (!ar) ar = Array.prototype.slice.call(from, 0, i);
-            ar[i] = from[i];
-        }
-    }
-    return to.concat(ar || Array.prototype.slice.call(from));
-};
 //더 엄격한 타입 지정 가능 설정한 값만 들어올수있음
 //literal types라고 한다
-var 더엄격한타입문자; //'string'만 들어올수있음
-var 더엄격한타입숫자; //123만 들어올수있음
-var 더엄격한타입불리언; //true만 들어올수있음
+let 더엄격한타입문자; //'string'만 들어올수있음
+let 더엄격한타입숫자; //123만 들어올수있음
+let 더엄격한타입불리언; //true만 들어올수있음
 더엄격한타입숫자 = 123;
 // 더엄격한타입숫자 = 12; 에러 발생
-var 접니다;
+let 접니다;
 접니다 = '근육';
 //🔥사용하는 이유
 //변수에 뭐가 들어올지 더 엄격하게 관리 가능
@@ -23,19 +14,15 @@ function 더엄격한함수(params) {
     return 0;
 }
 더엄격한함수('근육');
-function 가위바위보함수() {
-    var params = [];
-    for (var _i = 0; _i < arguments.length; _i++) {
-        params[_i] = arguments[_i];
-    }
-    return __spreadArray([], params, true);
+function 가위바위보함수(...params) {
+    return [...params];
 }
 console.log(가위바위보함수('가위', '바위', '보'));
 //🔥Literal type은 const변수 업글 버전
-var 자료 = {
+const 자료 = {
     name: 'kim',
 };
-var 자료2 = {
+const 자료2 = {
     name: 'kim',
 };
 //as const 키워드 사용 효과

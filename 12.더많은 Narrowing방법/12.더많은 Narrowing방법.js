@@ -13,7 +13,7 @@ function Narrowing2(params) {
 Narrowing2({ siwm: 'f' });
 //3. instanceof 연산자로 object narrowing 가능
 // (오브젝트) instanceof (부모 class(오브젝트))
-var 날짜 = new Date();
+let 날짜 = new Date();
 if (날짜 instanceof Date) {
 }
 function carBike(params) {

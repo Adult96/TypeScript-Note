@@ -33,7 +33,7 @@ function 함수1(params) {
 //아무것도 파라미터로 입력하지 않고 함수를 사용하면 "이름이 없습니다" 를 출력하는 함수를 만들어봅시다.
 //파라미터와 return 타입지정도 잘 해봅시다.
 function 숙제1(name) {
-    console.log(name ? "\uC548\uB155\uD558\uC138\uC694 ".concat(name) : '이름이 없습니다.');
+    console.log(name ? `안녕하세요 ${name}` : '이름이 없습니다.');
 }
 // (숙제2) 함수에 숫자 또는 문자를 집어넣으면 자릿수를 세어 출력해주는 함수를 만들어보십시오.
 // 예를 들어 '245' 이런 문자를 입력하면 3이 return 되어야합니다.
@@ -58,7 +58,7 @@ function 숙제2(params) {
 결혼가능하냐(100, false, '상') 이렇게 사용할 경우 아무것도 return되지 않습니다.
  */
 function 숙제3(monthMoney, home, rank) {
-    var point = 0;
+    let point = 0;
     point += monthMoney;
     point += home ? 500 : 0;
     point += rank === '상' ? 100 : 0;

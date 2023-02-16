@@ -40,6 +40,6 @@ function 이상한코드(params) {
     }
 }
 // never 타입 함수
-var neverArrowfunction = function () {
+let neverArrowfunction = () => {
     throw new Error();
 };

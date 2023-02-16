@@ -1,19 +1,19 @@
-var 회원 = 123; //유니온타입
+let 회원 = 123; //유니온타입
 회원; //number
 회원 = '회원 ㅎㅎ';
 회원; //string
 //🔥유니온 타입일때 가변적으로 타입이 변한다
 //변수에 정의된 Union 타입은 할당과 동시에 OR 역할이 사라집니다.
 //array, object에 정의된 Union 타입은 OR 연산자가 유지됩니다.
-var 회원들2 = [1, '2', 3];
-var 오브젝트 = { a: '123' };
-var 애니타입; //🔥모든 자료형 허용해줌 (타입스크립트를 쓰는 의미가 없어짐) 타입실드 해제 문법입
+let 회원들2 = [1, '2', 3];
+let 오브젝트 = { a: '123' };
+let 애니타입; //🔥모든 자료형 허용해줌 (타입스크립트를 쓰는 의미가 없어짐) 타입실드 해제 문법입
 애니타입 = 123;
 애니타입 = '123';
 애니타입 = true;
 애니타입 = [];
 애니타입 = {};
-var 언노운타입;
+let 언노운타입;
 언노운타입 = 123;
 언노운타입 = {};
 //❌에러발생 //let 변수1: string = 언노운타입;
@@ -34,7 +34,7 @@ var 언노운타입;
 
 2. 자료집어넣어도 타입은 그대로 unknown입니다.
  */
-var 나이2; //string또는number 라는 새로운 타입임
+let 나이2; //string또는number 라는 새로운 타입임
 //에러발생 //나이2 + 1; 자바스크립트에서는 '1'과 1인 숫자인 string과 number둘다 +1이 가능하기 때문에 에러가 발생
 /**
  * ❌에러발생
@@ -50,12 +50,12 @@ let 이름: unknown;
  */
 //✅unknown타입 변수 조작하려면 narrowing 또는 assertion 스킬을 사용
 //📌(숙제1) 다음 변수 4개에 타입을 지정해봅시다.
-var user = 'kim';
-var age1 = undefined;
-var married = false;
-var 철수 = [user, age1, married];
+let user = 'kim';
+let age1 = undefined;
+let married = false;
+let 철수 = [user, age1, married];
 //📌(숙제2) 학교라는 변수에 타입지정해보십시오.
-var 학교 = {
+let 학교 = {
     score: [100, 97, 84],
     teacher: 'Phil',
     friend: 'John',

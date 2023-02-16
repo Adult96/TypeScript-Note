@@ -11,7 +11,7 @@ function 네로윙(x) {
 네로윙(123);
 function 네로윙2(x) {
     // return x + 1; //에러 발생 유니온 타입으로 정의 해서 에러남
-    var arr = [];
+    let arr = [];
     // arr[0] = x; //에러발생
     if (typeof x === 'number') {
         //Narrowing으로 판정해주는 문법들을 사용하기만 하면 타입에러 발생 안함 typeof,(속성명)in(오브젝트),(인스턴스)instanceof(부모)
@@ -37,7 +37,7 @@ function assertion(x) {
 assertion('123'); //'1231'
 function assertion2(x) {
     // return x + 1; //에러 발생 유니온 타입으로 정의 해서 에러남
-    var arr = [];
+    let arr = [];
     arr[0] = x; //어썰션(assertion) 사용 왼쪽에있는 것을 오른쪽 타입으로 덮음
 }
 네로윙2(123);
@@ -54,15 +54,15 @@ function assertion2(x) {
 모르는 부분은 구글검색해도 봐드림
  */
 function 숙제_4_1(arr) {
-    return arr.map(function (v) { return (typeof v === 'string' ? Number(v) : v); });
+    return arr.map(v => (typeof v === 'string' ? Number(v) : v));
 }
 숙제_4_1(['1', 2, '3']);
 //📌(숙제2) 다음과 같은 함수를 만들어보십시오.
 // 입력
-var 철수쌤 = { subject: 'math' };
-var 영희쌤 = { subject: ['science', 'english'] };
-var 민수쌤 = { subject: ['science', 'art', 'korean'] };
-var 성인쌤 = { weightTraining: ['light weight'] };
+let 철수쌤 = { subject: 'math' };
+let 영희쌤 = { subject: ['science', 'english'] };
+let 민수쌤 = { subject: ['science', 'art', 'korean'] };
+let 성인쌤 = { weightTraining: ['light weight'] };
 /**
  * 지금 여러 변수에 선생님이 가르치고 있는 과목이 저장이 되어있습니다.
 
@@ -82,7 +82,7 @@ var 성인쌤 = { weightTraining: ['light weight'] };
 만들함수({ hello: 'hi' }); //이 경우 타입에러 나면 됩니다
  */
 function 숙제_4_2(obj) {
-    var subject = obj.subject;
+    const subject = obj.subject;
     return typeof subject === 'string' ? subject : subject[subject.length - 1];
 }
 console.log(숙제_4_2(영희쌤));
